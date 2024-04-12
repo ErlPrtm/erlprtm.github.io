@@ -6,17 +6,17 @@
   --header-height: 3.5rem;
 
   /*======= Colors =======*/
-  /* Color mode HSL(hue, saturation, lightness) */
-  --first-color: hsl(34, 100%, 27%);
-  --black-color: hsl(0, 0%, 0%);
-  --black-color-light: hsl(0, 0%, 40%);
-  --button-hover: hsl(0, 0%, 31%);
-  --white-color: hsl(0, 0%, 95%);
-  --title-color: hsl(0, 0%, 0%);
-  --text-color: hsl(0, 0%, 35%);
-  --text-color-light: hsl(0, 0%, 64%);
-  --body-color: hsl(0, 0%, 87%);
-  --container-color: hsl(0, 0%, 83%);
+  /* Color mode RGB(Red, Green, Blue) */
+  --first-color: rgb(95, 134, 113); /*Cutty Sark*/
+  --black-color: rgb(41, 38, 39);
+  --black-color-light: rgb(102, 102, 102);
+  --button: rgb(40, 42, 58); 
+  --white-color: rgb(245, 245, 245);
+  --title-color: rgb(0, 0, 0);
+  --text-color: rgb(89, 89, 89);
+  --text-color-light: rgb(163, 163, 163);
+  --body-color: rgb(231, 231, 231);
+  --container-color: rgb(209, 209, 209);
 
   /*======= Font and Typography =======*/
   /* Note: .5rem = 8px | 1rem = 16px  */
@@ -110,13 +110,14 @@ img {
 
 /*===================== Variables Dark theme =====================*/
 body.dark-theme {
-  --first-color: hsl(34, 80%, 50%);
+  --first-color: hsl(161, 75%, 24%);
   --black-color: hsl(0, 0%, 18%);
   --black-color-light: hsl(0, 0%, 30%);
   --title-color: hsl(0, 0%, 95%);
-  --text-color: hsl(0, 0%, 70%);
+  --text-color: hsl(36, 100%, 98%);
   --body-color: hsl(0, 0%, 8%);
   --container-color: hsl(0, 0%, 12%);
+  --button: hsl(29, 13%, 84%);
 }
 
 /*=====================
@@ -129,7 +130,7 @@ in dark theme
 
 .dark-theme .section__title-1::after,
 .dark-theme .section__title-2::after {
-  background-color: hsla(14, 70%, 50%, 0.2);
+  background-color: rgba(217, 80, 38, 0.2);
 }
 
 .dark-theme :is(.home__arrow, .home__line, .about__line) {
@@ -144,6 +145,11 @@ in dark theme
   );
 }
 
+.dark-theme .button {
+  background-color: var(--button);
+  color: var(--black-color);
+}
+
 .dark-theme :is(.button__ghost, .services__icon i) {
   color: var(--white-color);
 }
@@ -154,6 +160,15 @@ in dark theme
 
 .dark-theme :is(.contact__mail, .contact__input, .contact__label) {
   background-color: var(--container-color);
+}
+
+.dark-theme .contact__button {
+  background-color: var(--first-color);
+  color: var(--text-color);
+}
+
+.dark-theme .contact__button:hover {
+  background-color: rgb(20, 79, 60);
 }
 
 .dark-theme .footer {
@@ -206,7 +221,7 @@ in dark theme
   content: "";
   width: 40px;
   height: 28px;
-  background-color: hsla(14, 98%, 50%, 0.2);
+  background-color: rgba(95, 134, 113, 0.5); /* Cutty shark */
   position: absolute;
   top: -8px;
   right: -8px;
@@ -310,6 +325,7 @@ in dark theme
   display: block;
   font-size: var(--smaller-font-size);
   font-weight: var(--font-semi-bold);
+  margin-top: 1rem;
   margin-bottom: 3.5rem;
 }
 
@@ -557,10 +573,11 @@ in dark theme
 }
 
 .button {
-  background-color: var(--black-color);
+  background-color: var(--button);
   padding: 1.1rem 1.5rem;
   color: var(--white-color);
   transition: background-color 0.4s;
+  border-radius: 24px;
 }
 
 .button i {
@@ -568,20 +585,20 @@ in dark theme
 }
 
 .button:hover {
-  background-color: var(--first-color);
+  background-color: var(--title-color);
 }
 
 .button__ghost {
-  color: black;
+  color: var(--button);
   transition: box-shadow 0.4s;
 }
 
 .button__ghost i {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 .button__ghost:hover {
-  box-shadow: 2px 2px var(--button-hover);
+  box-shadow: 2px 2px 2px var(--title-color);
 }
 
 /*===================== ABOUT =====================*/
@@ -744,7 +761,6 @@ in dark theme
 
 .services__title {
   font-size: var(--h2-font-size);
-  margin-bottom: 1.25rem;
 }
 
 /*===================== PROJECTS =====================*/
@@ -760,7 +776,7 @@ in dark theme
 .projects__card {
   padding: 1rem 1rem 2rem;
   transition: background-color 0.4s;
-  border-radius: 20px;
+  border-radius: 8px;
 }
 
 .projects__image {
@@ -768,7 +784,7 @@ in dark theme
   margin-bottom: 0.75rem;
 }
 .projects__img {
-  border-radius: 5%;
+  border-radius: 16px;
 }
 
 .projects__button {
@@ -832,7 +848,7 @@ in dark theme
 
 .projects__link:hover,
 .projects__link:hover i {
-  color: var(--first-color);
+  color: var(--black-color);
 }
 
 .projects__card:hover {
@@ -973,6 +989,10 @@ in dark theme
 .contact__button {
   background-color: var(--first-color);
   cursor: pointer;
+}
+
+.contact__button:hover {
+  background-color: rgb(69, 97, 81);
 }
 
 /* Efek placeholder */
@@ -1123,19 +1143,23 @@ in dark theme
 
 /*===================== BREAKPOINTS =====================*/
 /* For small devices */
-@media screen and (max-width: 340px) {
+@media screen and (min-width: 320px) {
   .container {
     margin-inline: 1rem;
   }
 
+  .nav__logo-name {
+    display: none;
+  }
+  
   .home__image {
     width: 180px;
   }
-
+  
   .about__image {
     width: 180px;
   }
-
+  
   .about__shadow {
     height: 330px;
     right: -2.5rem;
@@ -1144,7 +1168,7 @@ in dark theme
   .contact__data {
     width: 100%;
   }
-
+  
   .contact__data .section__title-2 {
     transform: translateX(0);
   }
@@ -1158,7 +1182,7 @@ in dark theme
     grid-template-columns: 600px;
     justify-content: center;
   }
-
+  
   .contact__container {
     grid-template-columns: 500px;
     justify-content: center;
@@ -1169,7 +1193,7 @@ in dark theme
     padding: 4rem 1.5rem;
     margin-inline: auto;
   }
-
+  
   .contact__group {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 1rem;
@@ -1197,6 +1221,10 @@ in dark theme
 }
 
 @media screen and (min-width: 768px) {
+  .nav__logo-name {
+    display: flex;
+  }
+
   .services__container {
     grid-template-columns: repeat(2, 250px);
   }
@@ -1265,15 +1293,15 @@ in dark theme
   }
 
   .nav__link-button {
-    background-color: var(--black-color);
+    background-color: var(--button);
     color: var(--white-color);
     padding: 1.1rem 1.5rem;
     transition: background-color 0.4s;
-    border-radius: 10px;
+    border-radius: 8px;
   }
 
   .nav__link-button:hover {
-    background-color: var(--button-hover);
+    background-color: var(--black-color);
     color: var(--white-color);
   }
 
