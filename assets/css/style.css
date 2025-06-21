@@ -10,10 +10,11 @@
   --first-color: rgb(95, 134, 113); /*Cutty Sark*/
   --black-color: rgb(41, 38, 39);
   --black-color-light: rgb(102, 102, 102);
-  --button: rgb(40, 42, 58); 
+  --button: rgb(95, 134, 113); 
+  --button-hover: rgb(10, 10, 15);
   --white-color: rgb(245, 245, 245);
   --title-color: rgb(0, 0, 0);
-  --text-color: rgb(89, 89, 89);
+  --text-color: rgb(85, 85, 85);
   --text-color-light: rgb(163, 163, 163);
   --body-color: rgb(231, 231, 231);
   --container-color: rgb(209, 209, 209);
@@ -110,14 +111,15 @@ img {
 
 /*===================== Variables Dark theme =====================*/
 body.dark-theme {
-  --first-color: hsl(161, 75%, 24%);
-  --black-color: hsl(0, 0%, 18%);
-  --black-color-light: hsl(0, 0%, 30%);
-  --title-color: hsl(0, 0%, 95%);
-  --text-color: hsl(36, 100%, 98%);
-  --body-color: hsl(0, 0%, 8%);
-  --container-color: hsl(0, 0%, 12%);
-  --button: hsl(29, 13%, 84%);
+  --first-color: rgb(15, 107, 78);
+  --black-color: rgb(46, 46, 46);
+  --black-color-light: rgb(77, 77, 77);
+  --title-color: rgb(255, 255, 255);
+  --text-color: rgb(210, 210, 210);
+  --body-color: rgb(20, 20, 20);
+  --container-color: rgb(31, 31, 31);
+  --button: rgb(20, 138, 100);
+  --button-hover: rgb(10, 70, 51);
 }
 
 /*=====================
@@ -128,9 +130,17 @@ in dark theme
   box-shadow: 0 1px 12px hsla(0, 0%, 0%, 0.6);
 }
 
+.dark-theme .nav__link-button {
+  color: var(--black-color);
+}
+
+.dark-theme .nav__link-button:hover {
+  color: var(--black-color);
+}
+
 .dark-theme .section__title-1::after,
 .dark-theme .section__title-2::after {
-  background-color: rgba(217, 80, 38, 0.2);
+  background-color: rgba(15, 107, 78, 0.4);
 }
 
 .dark-theme :is(.home__arrow, .home__line, .about__line) {
@@ -146,8 +156,11 @@ in dark theme
 }
 
 .dark-theme .button {
-  background-color: var(--button);
-  color: var(--black-color);
+  color: var(--body-color);
+}
+
+.dark-theme .button:hover {
+  background-color: var(--button-hover);
 }
 
 .dark-theme :is(.button__ghost, .services__icon i) {
@@ -513,10 +526,11 @@ in dark theme
   margin-bottom: 1.5rem;
 }
 
-.home description b {
+.home__description b {
   background: linear-gradient(
     90deg,
-    hsla(14, 98%, 50%, 0.3) hsla(14, 98%, 50%, 0)
+    hsla(14, 98%, 50%, 0.3),
+    hsla(14, 99%, 50%, 0)
   );
 }
 
@@ -598,7 +612,7 @@ in dark theme
 }
 
 .button__ghost:hover {
-  box-shadow: 2px 2px 2px var(--title-color);
+  box-shadow: 2px 4px 4px var(--title-color);
 }
 
 /*===================== ABOUT =====================*/
@@ -785,6 +799,8 @@ in dark theme
 }
 .projects__img {
   border-radius: 16px;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
 }
 
 .projects__button {
@@ -842,13 +858,13 @@ in dark theme
 
 .projects__link i {
   font-size: 1rem;
-  color: var(--title-color);
+  color: var(--text-color);
   transition: color 0.4s;
 }
 
 .projects__link:hover,
 .projects__link:hover i {
-  color: var(--black-color);
+  color: var(--title-color);
 }
 
 .projects__card:hover {
@@ -1296,12 +1312,12 @@ in dark theme
     background-color: var(--button);
     color: var(--white-color);
     padding: 1.1rem 1.5rem;
-    transition: background-color 0.4s;
+    transition: background-color 0.5s;
     border-radius: 8px;
   }
 
   .nav__link-button:hover {
-    background-color: var(--black-color);
+    background-color: var(--button-hover);
     color: var(--white-color);
   }
 

@@ -39,7 +39,7 @@ window.addEventListener("scroll", shadowHeader);
 
 // ============ EMAIL JS ============ //
 const contactForm = document.getElementById("contact__form"),
-  contactMessage = document.getElementById("contact-message");
+contactMessage = document.getElementById("contact-message");
 
 const sendEmail = (e) => {
   e.preventDefault();
