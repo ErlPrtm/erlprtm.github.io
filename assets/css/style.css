@@ -11,7 +11,7 @@
   --black-color: rgb(41, 38, 39);
   --black-color-light: rgb(102, 102, 102);
   --button: rgb(95, 134, 113); 
-  --button-hover: rgb(10, 10, 15);
+  --button-hover: rgb(56, 78, 66);
   --white-color: rgb(245, 245, 245);
   --title-color: rgb(0, 0, 0);
   --text-color: rgb(85, 85, 85);
@@ -599,7 +599,7 @@ in dark theme
 }
 
 .button:hover {
-  background-color: var(--title-color);
+  background-color: var(--button-hover);
 }
 
 .button__ghost {
@@ -612,7 +612,7 @@ in dark theme
 }
 
 .button__ghost:hover {
-  box-shadow: 2px 4px 4px var(--title-color);
+  box-shadow: 2px 4px 4px var(--button-hover);
 }
 
 /*===================== ABOUT =====================*/
