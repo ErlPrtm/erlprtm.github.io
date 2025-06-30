@@ -7,11 +7,11 @@
 
   /*======= Colors =======*/
   /* Color mode RGB(Red, Green, Blue) */
-  --first-color: rgb(95, 134, 113); /*Cutty Sark*/
+  --first-color: rgb(21, 190, 224);
   --black-color: rgb(41, 38, 39);
   --black-color-light: rgb(102, 102, 102);
-  --button: rgb(95, 134, 113); 
-  --button-hover: rgb(56, 78, 66);
+  --button: rgb(38, 196, 227);
+  --button-hover: rgb(10, 112, 159);
   --white-color: rgb(245, 245, 245);
   --title-color: rgb(0, 0, 0);
   --text-color: rgb(85, 85, 85);
@@ -111,15 +111,15 @@ img {
 
 /*===================== Variables Dark theme =====================*/
 body.dark-theme {
-  --first-color: rgb(15, 107, 78);
+  --first-color:rgb(26, 167, 236);
   --black-color: rgb(46, 46, 46);
   --black-color-light: rgb(77, 77, 77);
   --title-color: rgb(255, 255, 255);
   --text-color: rgb(210, 210, 210);
   --body-color: rgb(20, 20, 20);
   --container-color: rgb(31, 31, 31);
-  --button: rgb(20, 138, 100);
-  --button-hover: rgb(10, 70, 51);
+  --button: rgb(12, 155, 226);
+  --button-hover: rgb(8, 107, 156);
 }
 
 /*=====================
@@ -140,7 +140,7 @@ in dark theme
 
 .dark-theme .section__title-1::after,
 .dark-theme .section__title-2::after {
-  background-color: rgba(15, 107, 78, 0.4);
+  background-color: rgba(12, 155, 226, 0.4);
 }
 
 .dark-theme :is(.home__arrow, .home__line, .about__line) {
@@ -181,7 +181,7 @@ in dark theme
 }
 
 .dark-theme .contact__button:hover {
-  background-color: rgb(20, 79, 60);
+  background-color: rgb(8, 107, 156);
 }
 
 .dark-theme .footer {
@@ -234,7 +234,7 @@ in dark theme
   content: "";
   width: 40px;
   height: 28px;
-  background-color: rgba(95, 134, 113, 0.5); /* Cutty shark */
+  background-color: rgba(46, 203, 233, 0.5); /* Cutty shark */
   position: absolute;
   top: -8px;
   right: -8px;
@@ -1008,7 +1008,7 @@ in dark theme
 }
 
 .contact__button:hover {
-  background-color: rgb(69, 97, 81);
+  background-color: rgb(18, 143, 200);
 }
 
 /* Efek placeholder */
